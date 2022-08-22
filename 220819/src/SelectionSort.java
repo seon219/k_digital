@@ -17,7 +17,7 @@ public class SelectionSort {
 //			System.out.println();
 //		}
 		
-		int data[] = {8, 3, 4, 9, 1, 2, 5};
+		int data[] = {8, 3, 4, 9, 1};
 		
 		for (int i = 0; i < data.length-1; i ++) { // 선택위치, 회전수 제어
 			for (int j = i + 1; j < data.length; j++) { // 선택위치의 데이터와 비교할 대상이 되는 데이터 위치
@@ -31,6 +31,8 @@ public class SelectionSort {
 					int temp = data[i];
 					data[i] = data[j];
 					data[j] = temp;
+					
+					//System.out.println(i + 1 + "회전 결과 : " + Arrays.toString(data));
 				}
 			} // 회전 종료
 			System.out.println(i + 1 + "회전 결과 : " + Arrays.toString(data));
