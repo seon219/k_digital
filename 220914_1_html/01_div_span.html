@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>div/span</title>
+<!-- <meta http-equiv="refresh" content="1; url='?' "> -->
+
+
+<style type="text/css">
+	div { /* width와 height가 적용 */
+		background-color: skyblue;
+		width: 200px;
+		height: 50px;
+	}
+	
+	span { /* width와 height가 적용되지 않음 */
+		background-color: pink;
+		width: 200px;
+		height: 50px;
+	}
+	
+	
+	
+</style>
+
+
+</head>
+<body>
+	
+	
+	<!-- 
+		1. 블록요소
+			div, h1, p, ...
+			- 사용 가능한 최대 가로 너비를 사용. 크기 지정 가능
+			- 기본값으로 width: 100%, height: 0;을 사용
+			- 수직으로 쌓인다 => 태그가 사용되면 줄이 변경된다.
+			- 레이아웃 구성에 사용
+			- margin, padding의 모든 여백 사용 가능
+			
+		2. 인라인 요소
+		 	span, img, ...
+		 	- 필요한 만큼의 너비를 사용. 키기 지능 불가능
+		 	- 기본값으로 width: 0, height: 0;을 사용
+			- 수평으로 펼쳐진다 => 태그가 사용되도 줄이 변경되지 않는다.
+			- 텍스트에 사용
+			- margin은 위, 아래 여백 사용 불가능. padding은 모든 여백 사용 가능
+	 -->
+	
+	<div>  </div>
+	<div> 하이루 </div>
+	<span>  </span>
+	<span> 방가방가 </span>
+	
+</body>
+</html>
