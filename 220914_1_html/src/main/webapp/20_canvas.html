@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>canvas</title>
+</head>
+<body>
+
+	<!--  
+		<canvas> 태그는 javascript를 이용해 그래픽을 표시
+	-->
+	
+	<canvas id="canvas" width="700" height="700"> </canvas>
+	<script type="text/javascript">
+	
+		// id 속성이 canvas인 캔버스인 객체를 얻어온다
+		const canvas = document.getElementById('canvas');
+		// 얻어온 캔버스 객체에 2차원 그래픽을 사용하겠다고 지정
+		const ctx = canvas.getContext('2d');
+		// rgb : 각 색의 값을 0 ~ 255 사이로 지정해 색상을 만든다.
+		// alpha는 투명도를 의미하고 생략 가능. 생략시 기본값은 1이고 완전 불투명을 의미
+		ctx.fillStyle = 'rgb(200, 0, 0)';
+		// 모니터 왼쪽 상단에서 10, 10 만큼 떨어진 자리에서 시작되는 폭 500, 높이 500인 사각형 그린다.
+		ctx.fillRect(10, 10, 500, 500);
+		ctx.fillStyle = 'rgb(0, 0, 200, 0.5)';
+		ctx.fillRect(100, 100, 500, 500);
+		
+	</script>
+
+</body>
+</html>
