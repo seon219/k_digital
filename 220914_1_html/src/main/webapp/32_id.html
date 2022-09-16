@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>id</title>
+
+<style type="text/css">
+
+	.section{
+		background: skyblue;
+		height: 30px;
+	}
+	
+	#section{
+		background: pink;
+		height: 30px;
+	}
+
+</style>
+</head>
+<body>
+
+	<!--  
+		class : 공백으로 구분하는 요소의 별명을 지정. 같은 속성 값을 가지는 class를 여러개 지정할 수 있다
+		css나 javascript에서 요소 선택기(css 선택자, getElementsByClass, querySelectorAll)를 통해서 요소를 선택하거나 접근 가능
+		
+		
+		id : 문서에서 사용할 고유할 식별자(id, identifier)를 정의. 같은 속성 값을 가지는 id는 딱 1개만 지정 가능
+		css나 javascript에서 요소 선택기(css 선택자, getElementsByI, querySelector)를 통해서 요소를 선택하거나 접근 가능
+		
+	-->
+	
+	<div class="section"></div>
+	<div class="section"></div>
+	<div id="section"></div>
+	
+	<script type="text/javascript">
+		
+		/* class 얻어오기 */
+		const section1 = document.getElementsByClassName('section');
+		const section2 = document.querySelectorAll('.section');
+		
+		/* id 얻어오기 */
+		const section3 = document.getElementById('section');
+		const section4 = document.querySelector('#section');
+		
+	</script>
+	
+	
+	<!-- title 속성은 컨트롤 위로 마우스를 올렸을 때 표시할 메시지를 지정 -->
+	<h2 title="이 부분은 제목2 입니다.">제목2</h2>
+	<a href="http://www.google.com" title="구글로 이동합니다.">구글</a>
+	
+	
+	<!-- 
+		data-*: 사용자 정의 데이터 속성을 지정. *위치에는 무조건 소문자로 입력
+		javascript나 jquery에서 이용할 수 있는 데이터(정보)를 저장하는 용도로 사용
+	-->
+	
+	<div id="me" data-my-name="Hong" data-my-age="50">
+		<h1>My Info</h1>
+	</div>
+	
+	
+	<script type="text/javascript">
+		
+		//const me = document.getElementById('me');
+		//const me = document.querySelector('#me');
+		const me = document.querySelectorAll('#me')[0];
+		//alert(me)
+		console.log(me);
+		console.log(me.innerText); //html 태그는 무시하고 문자열만 얻어온다
+		console.log(me.innerHTML); //html 태그와 문자열을 얻어온다.
+		
+		console.log(dataset);
+		console.log(me.dataset.myName);
+		console.log(me.dataset.myAge);
+		
+	</script>
+
+</body>
+</html>

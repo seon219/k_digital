@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>table</title>
+<!-- <meta http-equiv="refresh" content="3; url='?' "> -->
+
+<link rel="stylesheet" href="./css/23_tableStyle.css">
+
+</head>
+<body>
+
+	<!--  
+		<table> 태그는 행과 열로 이루어진 표를 말한다
+		width 속성은 표 전체 너비 지정
+		border 속성은 표의 선 두께 지정
+		align 속성은 표의 정렬방식 지정
+		cellpadding 속성은 표를 구성하는 선과 칸(셀) 내부에 입력된 내용과의 여백 지정 (안여백)
+		cellspacing 속성은 표를 구성하는 선과 선 사이의 여백을 지정
+		bgcolor 속성은 표 전체의 배경색을 지정
+		
+		
+		<tr> 태그는 표의 행을 만든다.
+		height 속성은 행의 높이를 지정
+		
+		<th> 태그는 행을 구성하는 열을 만든다. 머리글 칸(표의 첫줄), 텍스트가 굵게, 가운데 정렬로 표시됨
+		colspan 속성으로 병합할 열의 개수를 지정
+		rowspan 속성으로 병합할 행의 개수를 지정
+		width 속성은 칸의 너비 지정
+		
+		<td> 태그는 행을 구성하는 열을 만든다. 머리글 칸을 제외한 나머지 칸
+		colspan 속성으로 병합할 열의 개수를 지정
+		rowspan 속성으로 병합할 행의 개수를 지정
+		width 속성은 칸의 너비 지정
+	-->
+	
+	<table width="500" border="1" align="center" cellspacing="0" cellpadding="10" bgcolor="tomato">
+		<tr height="50">
+			<th colspan="2">
+				데이터
+			</th>
+		</tr>
+		
+		<tr height="50" bgcolor="cyan">
+			<td width="150" align="center" bgcolor="yellow">타입</td>
+			<td width="350">값</td>
+		</tr>
+		<tr height="50" bgcolor="cyan">
+			<td align="center" bgcolor="yellow">알파벳</td>
+			<td>A</td>
+		</tr>
+		<tr height="50" bgcolor="cyan">
+			<td align="center" bgcolor="yellow">숫자</td>
+			<td>1</td>
+		</tr>
+	</table>
+	
+	
+	<table border="1">
+		<tr>
+			<th rowspan="2">데이터</th>
+			<td>타입</td>
+			<td>알파벳</td>
+			<td>숫자</td>
+		</tr>
+		<tr>
+			<td>값</td>
+			<td>A</td>
+			<td>1</td>
+		</tr>
+		
+	</table>
+	
+	
+</body>
+</html>
