@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>우선순위</title>
+
+<style type="text/css">
+
+	/*
+		스타일 우선순의 결정
+		같은 요소가 여러 스타일 선언의 대상이 될 경우 어떤 선언의 속성을 우선 적용할지 결정하는 방법
+		1. important가 적용된 선언 방식이 모든 방식보다 우선된다.
+		2. 명시도 점수 : 명시도(중요도) 점수가 높은 선언이 우선된다.
+		3. 선언 순서 : 명시도 점수가 같은 경우. 가장 마지막에 작성된 선언이 우선된다.
+		4. 명시도는 '상속(부모 스타일이 자식 스타일로 적용되는 것)' 규칙보다 우선된다.
+		
+		우선순위에는 "중요도", "명시도", "선언순서"의 개념
+		1. 가장 중요(!important): 모든 선언을 무시하고 가장 우선됨
+		2. 인라인(inline)점수: 1000점  => 태그 안에 사용
+		3. 아이디(id selector)점수: 100점
+		4. 클래스(class selector)점수: 10점
+		5. 태그(tag(type) selector)점수: 1점
+		6. 전체(universal selector)점수: 0점
+		7. 상속(css inheritance)점수: 계산하지 않음
+		
+		
+		점수 계산 연습
+		.list li.item => .class tag.class => 21점
+		.list li:hover => .class tag.가상class => 21점
+		.box::before => .class::가상요소(tag) => 11점
+		#submit spans => id tag => 101점
+		header .menu li:nth-child(2) => tag class tag.가상class => 22점
+		h1 => tag => 1
+		:not(.box) => 가상class이지만 연산자로 쓰임(.class) => 10점
+		:not(span) => 가상class 태그 => 1점
+		
+		* :horver와 같은 가상 클래스는 점수(10)를 가지며, ::before와 같은 가상 요소는 태그선택자의 점수(1)을 가짐
+		* 부정연산자(:not)는 점수를 가지지 않는다.
+	*/
+	
+	
+	div{ /* 1. 중요) */
+		color: red !important;
+		font-weight: bold;
+		font-size: 20pt;
+	}
+	
+	#color_yellow { /* 3. 아이디 */
+		color: yellow;
+	}
+	
+	.color_green{ /* 4. 클래스 */
+		color: green;
+	}
+	
+	div { /* 5. 태그 */
+		color: blue;
+	}
+	
+	* { /* 6. 전체 */
+		color: tomato;
+	}
+	
+	body{ /* 7. 상속 */
+		color: violet; 
+	}
+	
+
+</style>
+
+</head>
+<body>
+
+	<div id="color_yellow" class="color_green" style="color: orange">hello world!</div> <!-- 2. 인라인 -->
+
+</body>
+</html>

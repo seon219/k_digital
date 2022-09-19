@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>가상클래스 선택자</title>
+
+<style type="text/css">
+
+	/* ":"이 가상 클래스 선택자 */
+	
+	/* hover: 선택자에 마우스 포인터가 올라가 있는 동안에만 선택 */
+	a:hover {
+		color: lime;
+		font-weight: bold;
+		font-size: 20pt;
+	}
+	
+	.box1 {
+		width: 100px;
+		height: 100px;
+		background: tomato;	
+	}
+	
+	.box1:hover {
+		width: 200px;
+		background: pink;
+		/* transition: 1s; */
+		transition-duration: 1s; /* 애니메이션 실행시간, 단위는 초 단위로 뒤에 s를 붙인다. */
+	}
+	
+	
+	.box2 {
+		width: 100px;
+		height: 100px;
+		background: mediumaquamarine;	
+	}
+	
+	/* active: 선택자를 마우스로 누르고 있는 동안에만 선택 */
+	.box2:active {
+		width: 200px;
+		background: skyblue;
+		/* transition: 1s; */
+		transition-duration: 1s; /* 애니메이션 실행시간, 단위는 초 단위로 뒤에 s를 붙인다. */
+	}
+	
+	
+	/* focus: 선택자가 포커스 된 동안에만 선택 */
+	/* 대화형 컨텐츠(inpyt, img, tabindex)에서 사용 가능 */
+	input {
+		width: 100px;
+		background: yellowgreen;	
+		outline: none; /* input 태그의 border 외곽선을 설정 */
+		border: 3px solid green;
+		padding: 5px 10px; /* 상하, 좌우 */
+	}
+	
+	input:focus {
+		width: 200px;
+		background: yellow;	
+		border: 3px solid orange;
+		transition-duration: 1s;
+	}
+	
+	
+	/* first-child: 선택자가 형제요소중 첫번째 요소라면 선택 */
+	.fruits > li:first-child {
+		color : red;
+	}
+	
+	/* last-child: 선택자가 형제요소중 마지막 요소라면 선택 */
+	.fruits > li:last-child {
+		color : blue;
+	}
+	
+</style>
+
+</head>
+<body>
+
+	
+	<a herf="http://www.google.com">google</a>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<input type="text"/>
+	
+	
+	<ul class="fruits">
+		<li>딸기</li> <!-- first-child -->
+		<li>사과</li>
+		<li>오렌지</li>
+		<li>망고</li> <!-- last-child -->
+	</ul>
+
+</body>
+</html>

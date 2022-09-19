@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>단위2</title>
+
+<style type="text/css">
+
+	/*  
+		px: 픽셀, 고정크기
+		%: 비율, 부모 요소의 영향을 받음
+		em: 자기 자신의 폰트 크기의 영향을 받는다.
+		rem(root em): 가장 조상요소(html 태그)의 폰트 크기의 영향을 받는다.
+	*/
+	
+	html {
+		font-size: 10px;
+	}
+	
+	body * { /* body의 모든 자손 */
+		border: 2px solid red;
+	}
+	
+	
+	.container {
+		font-size: 10px;
+		/* width: 600px; */
+		/* container class font-size의 60배 */
+		width: 60em;
+	}
+	
+	
+	.parent {
+		/* width: 300px; */
+		/* width: 50%; */ /* 부모 요소 .container의 너비 600px의 50% 크기*/
+		/* width: 30em; */ /* 부모요소에서 상속받은 font-size가 10px일 경우 300px의 크기 */
+		font-size: 2em; /* 부모요소에서 상속받은 font-size가 10px일 경우 20px의 크기 */
+		width: 15em; /* font-size가 2em(20px) 이므로 300px의 크기 */
+	}
+	
+	
+	.child {
+		/* width: 150px; */
+		/* width: 50%; */
+		/* width: 7.5em; */
+		font-size: 2em;
+		/* width: 3.75em; */
+		width: 15rem; /* html의 font-size가 10px일 경우 150px의 크기 */
+	}
+
+</style>
+
+</head>
+<body>
+
+	<div class="container">
+		Container
+		<div class="parent"> 
+			Parent
+			<div class="child">Child1</div>
+			<div class="child">Child2</div>
+		</div>
+	</div>
+
+</body>
+</html>
