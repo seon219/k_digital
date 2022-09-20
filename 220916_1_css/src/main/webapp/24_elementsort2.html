@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>요소정렬2-float</title>
+
+<style type="text/css">
+
+	/*  
+		float 해제
+		float 속성이 적용된 요소의 주위로 다른 요소들이 흐르게 되는데 이를 방지하기 위해 float 속성 해제
+		1. 형제 요소에 claer: lefh, clear: rightl;를 추가해서 해제
+			clear: both;는 left, right를 구분하지 않고, 무조건 float 해제
+		2. 부모 요소에 overflow: hidden;이나 overflow: auto;를 추가해서 해제
+		3. 부모 요소에 가상 요소 선택자 "::after"를 이용해 content를 추가해서 해제
+	*/
+	
+	.box1{
+		width: 150px;
+		height: 100px;
+		background: tomato;
+		font-size: 30px;
+		color: white;
+		margin: 10px;
+		float: left;
+	}
+	
+	.box2{
+		width: 150px;
+		height: 100px;
+		background: skyblue;
+		font-size: 30px;
+		color: white;
+		margin: 10px;
+		clear: both;
+	}
+	
+	.box3{
+		width: 150px;
+		height: 100px;
+		background: yellowgreen;
+		font-size: 30px;
+		color: white;
+		margin: 10px;
+		float: right;
+	}
+	
+	.box4{
+		width: 150px;
+		height: 100px;
+		background: orange;
+		font-size: 30px;
+		color: white;
+		margin: 10px;
+		clear: both;
+	}
+	
+	/* ============================ */
+	
+	.float-box1 {
+		width: 150px;
+		height: 100px;
+		background: hotpink;
+		font-size: 30px;
+		color: white;
+		margin: 10px;
+		float: left;
+	}
+	
+	.new-box1 {
+		width: 700px;
+		height: 30px;
+		background: yellow;
+	}
+	
+	/* clearfix는 .float-box의 부모 요소 */
+	.clearfix1 {
+		/* overflow: hidden; */
+		overflow: auto;
+	}
+	
+	/* ============================ */
+	
+	.float-box2{
+		width: 150px;
+		height: 100px;
+		background: skyblue;
+		font-size: 30px;
+		color: white;
+		margin: 10px;
+		float: left;
+	}
+	
+	.new-box2{
+		width: 700px;
+		height: 30px;
+		background: blue;
+	}
+	
+	/* clearfix는 .float-box의 부모 요소 */
+	.clearfix2::after {
+		content: "";
+		clear: both;
+		display: block;
+	}
+	
+
+</style>
+
+</head>
+<body>
+
+	<div class="box1">1</div>
+	<div class="box1">2</div>
+	<div class="box1">3</div>
+	<div class="box2">4</div> <!-- 형제 간의 float 속성 해제 -->
+	
+	<div class="box3">1</div>
+	<div class="box3">2</div>
+	<div class="box3">3</div>
+	<div class="box4">4</div> <!-- 형제 간의 float 속성 해제 -->
+	
+	
+	<div class="clearfix1">
+		<div class="float-box1">1</div>
+		<div class="float-box1">2</div>
+		<div class="float-box1">3</div>
+		<div class="float-box1">4</div>
+	</div>
+	<div class="new-box1"></div> <!-- 형제의 자식과의 float 속성 해제 -->
+	
+	
+	<div class="clearfix2">
+		<div class="float-box2">1</div>
+		<div class="float-box2">2</div>
+		<div class="float-box2">3</div>
+		<div class="float-box2">4</div>
+	</div>
+	<div class="new-box2"></div> <!-- 형제의 자식과의 float 속성 해제 -->
+
+</body>
+</html>

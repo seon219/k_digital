@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>요소정열6-position</title>
+
+<style type="text/css">
+
+	.grand-parent {
+		width: 400px;
+		height: 300px;
+		border: 3px solid tomato;
+		padding: 30px 100px 100px 30px;
+		
+		/* 위치상의 부모는 position: xxx;가 지정되어야 함. static 제외 */
+		/* 위치상 부모가 지정되지 않은 경우 브라우저 기준으로 배치 */
+		position: absolute;
+		top: 50px;
+		left: 100px;
+	}
+	
+	.parent {
+		width: 400px;
+		height: 300px;
+		border: 4px solid skyblue;
+		
+		/* 아래의 position: relative;을 주석으로 처리하면 parent는 child의 위치상의 부모로 인정받지 못하고,
+			position: relative;가 지정된 grand-parent를 위치상의 부모로 인정하기 때문에,
+			absolute에 position: absolute;이 지정되었으므로 grand-parent에 맞취서 위치가 변경*/
+		/* position: relative; */
+		top: 30px;
+		left: 20px;
+	}
+	
+	.child {
+		width: 120px;
+		height: 80px;
+		border: 2px solid pink;
+		font-size: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.absolute {
+		/* 자기 자신이 아닌 위치상의 부모(position: xxx;) 요소를 기준으로 배치 */
+		position: absolute;
+		bottom: 50px;
+		right: 10px;
+	}
+
+</style>
+
+</head>
+<body>
+
+	<div class="grand-parent">
+		<div class="parent">
+			<div class="child">1</div>
+			<div class="child absolute">2</div>
+			<div class="child">3</div>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>요소정렬5-position</title>
+
+<style type="text/css">
+	
+	.box {
+		width: 100px;
+		height: 100px;
+		background: lime;
+		border: 2px solid green;
+		border-radius: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.relative {
+		/* relative: 자기 자신이 있던 위치를 기준으로 삼는다 */
+		/* absolute: 위치상 부모 위치를 기준으로 삼는다. */
+		position: relative;
+		/* top: 20px;
+		left: 70px; */
+		bottom: 40px;
+		right: 30px;
+	}
+
+</style>
+
+</head>
+<body>
+
+	<div class="box">1</div>
+	<div class="box relative">2</div>
+	<div class="box">3</div>
+
+
+</body>
+</html>
