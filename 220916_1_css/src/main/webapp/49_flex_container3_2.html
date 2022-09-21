@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>flex 컨테이너 속성 3 - 주축</title>
+
+<style type="text/css">
+
+	/* 
+		justify-content: 주 축의 정렬 방법을 지정. flex-direction 속성의 영향을 받는다.
+			=> flex-start: 기본값, flex-direction 속성이 row면 item을 왼쪽으로 정렬해서 왼쪽부터 오른쪽으로 표시,
+				column이면 item을 위로 정렬해서 위부터 아래로 표시
+			=> flex-end: flex-direction 속성이 row면 item을 오른쪽으로 정렬해서 왼쪽부터 오른쪽으로 표시,
+				column이면 item을 아래로 정렬해서 위부터 아래로 표시
+			=> center: item을 가운데로 정렬
+			=> space-between: 첫 item을 맨 앞에, 마지막 item을 맨 마지막에 배치하고 item과 item 사이를 균등하게 분할해서 배치
+			=> space-around: 모든 item의 왼쪽, 오른쪽 여백을 균등하게 지정해서 배치
+		
+	*/
+	.container1 {
+		border: 3px solid tomato;
+		display: flex; 
+		height: 800px;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+	
+	.container1 .item1 {
+		width: 150px;
+		height: 100px;
+		border: 2px solid blue;
+		border-radius: 10px;
+		background-color: skyblue;
+	}
+	
+	.container2 {
+		border: 3px solid tomato;
+		display: flex; 
+		height: 800px;
+		flex-direction: column;
+		justify-content: flex-end;
+	}
+	
+	.container2 .item2 {
+		width: 150px;
+		height: 100px;
+		border: 2px solid blue;
+		border-radius: 10px;
+		background-color: skyblue;
+	}
+
+	.container3 {
+		border: 3px solid tomato;
+		display: flex; 
+		height: 800px;
+		flex-direction: column;
+		justify-content: center;
+	}
+	
+	.container3 .item3 {
+		width: 150px;
+		height: 100px;
+		border: 2px solid blue;
+		border-radius: 10px;
+		background-color: skyblue;
+	}
+	
+	.container4 {
+		border: 3px solid tomato;
+		display: flex; 
+		height: 800px;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	
+	.container4 .item4 {
+		width: 150px;
+		height: 100px;
+		border: 2px solid blue;
+		border-radius: 10px;
+		background-color: skyblue;
+	}
+	
+	.container5 {
+		border: 3px solid tomato;
+		display: flex; 
+		height: 800px;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	
+	.container5 .item5 {
+		width: 150px;
+		height: 100px;
+		border: 2px solid blue;
+		border-radius: 10px;
+		background-color: skyblue;
+	}
+	
+</style>
+
+</head>
+<body>
+
+	flex-start<br/>
+	<div class="container1">
+		<div class="item1">1</div>
+		<div class="item1">2</div>
+		<div class="item1">3</div>
+		<div class="item1">4</div>
+		<div class="item1">5</div>
+	</div>
+	
+	flex-end<br/>
+	<div class="container2">
+		<div class="item2">1</div>
+		<div class="item2">2</div>
+		<div class="item2">3</div>
+		<div class="item2">4</div>
+		<div class="item2">5</div>
+	</div>
+	
+	center<br/>
+	<div class="container3">
+		<div class="item3">1</div>
+		<div class="item3">2</div>
+		<div class="item3">3</div>
+		<div class="item3">4</div>
+		<div class="item3">5</div>
+	</div>
+	
+	space-between<br/>
+	<div class="container4">
+		<div class="item4">1</div>
+		<div class="item4">2</div>
+		<div class="item4">3</div>
+		<div class="item4">4</div>
+		<div class="item4">5</div>
+	</div>
+	
+	space-around<br/>
+	<div class="container5">
+		<div class="item5">1</div>
+		<div class="item5">2</div>
+		<div class="item5">3</div>
+		<div class="item5">4</div>
+		<div class="item5">5</div>
+	</div>
+	
+</body>
+</html>

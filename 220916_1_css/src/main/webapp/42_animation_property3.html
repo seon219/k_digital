@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>애니메이션 속성3</title>
+
+<style type="text/css">
+
+	/* 
+		animation-intertion-count: 애니메이션의 반복 횟수 지정. 1 기본값
+			=> 숫자: 반복 횟수 지정
+			=> infinite: 무한 반복
+		animation-direction: 애니메이션 반복 방향 설정. nomal 기본값
+			=> normal: 기본값. 정방향(0% => 100%)로 실행
+			=> reverse: 역방향(100% => 10%)로 실행
+			=> alternate: 정방향으로 실행한 수 역방향으로 실행 => 정방향 왕복해서 실행
+			=> alternate-reverse: 역방향으로 실행한 후 정방향으로 실행 => 역방향 왕복 실행
+	*/
+	
+	.box {
+		width: 100px;
+		height: 100px;
+		background: tomato;
+		border-radius: 10px;
+		margin: 10px;
+		
+		animation-name: move;
+		animation-duration: 2s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+		animation-direction: normal;
+	}
+	
+	
+	@keyframes move {
+		0%{ 
+			transform: tranaslate(0px, 0px);
+		}
+		25%{ 
+			transform: translate(100px, 0px);
+		}
+		50%{ 
+			transform: translate(100px, 100px);
+		}
+		75%{ 
+			transform: translate(0px, 100px);
+		}
+		100%{ 
+			transform: translate(0px, 0px);
+		}
+	}
+	
+
+</style>
+
+</head>
+<body>
+
+	<div class="box"></div>
+
+
+</body>
+</html>

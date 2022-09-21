@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>애니메이션 속성1</title>
+
+<style type="text/css">
+
+	/* 
+		animation-name: @keyframes로 만드는 애니메이션 규칙의 이름을 지정. none이 기본값
+		animation-duration: 애니메이션 지속 시간을 설정. 0s 기본값 
+	*/
+	
+	.box {
+		width: 100px;
+		height: 100px;
+		background-color: tomato;
+		border-radius: 10px;
+	}
+	
+	.box:hover {
+		animation-name: ani;
+		/* animation-duration: 2s; */
+		/* ms 단위를 사용하면 1/1000초 단위로 애니메이션 지정 가능 */
+		animation-duration: 200ms;
+	}
+	
+	@keyframes ani {
+		0%{ 
+			width: 100px;
+			background-color: tomato;
+		}
+		
+		50%{ 
+			width: 500px;
+			background-color: skyblue;
+		}
+		
+		100%{ 
+			width: 300px;
+			background-color: dodgerblue;
+		}
+	}
+	
+
+</style>
+
+</head>
+<body>
+
+	<div class="box"></div>
+
+
+</body>
+</html>

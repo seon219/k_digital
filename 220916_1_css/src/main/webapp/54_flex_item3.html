@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>flex 아이템 속성3</title>
+
+<style type="text/css">
+
+	/* 
+		flex-shrink: 모든 item의 크기의 합계보다 컨테이너 크기가 작아졌을 때 flex item의 감소너비 비율 설정
+			=> 숫자가 크면 더 많은 너비가 감소
+		felx-basis: flex item의 공간 베본 전 기본 너비 설정
+	*/
+	.container {
+		width: 400px;
+		border: 3px solid tomato;
+		display: flex; 
+	}
+	
+	.container .item {
+		width: 200px;
+		height: 100px;
+		border: 2px solid blue;
+		border-radius: 10px;
+		background-color: skyblue;
+		
+	}
+	
+	
+	.container .item1 {
+		flex-shrink: 1; /* 컨테이너의 크기가 item 크기의 합계보다 작기 때문에 item의 너비(200px)의 1/3만큼 작아진다. */
+	}
+	.container .item2 {
+		flex-shrink: 0; /* container가 작아져도 item의 크기가 변경되지 않는다. */
+	}
+	.container .item3 {
+		flex-shrink: 2; /* 컨테이너의 크기가 item 크기의 합계보다 작기 때문에 item의 너비(200px)의 2/3만큼 작아진다. */
+	}
+	
+</style>
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="item item1">Good job!</div>
+		<div class="item item2">A</div>
+		<div class="item item3">Hello World!</div>
+	</div>
+	
+</body>
+</html>
