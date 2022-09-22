@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>grid 아이템 단위1</title>
+
+<style type="text/css">
+
+	/* 
+		fr: fr(fractional unit)은 사용가능한 공간에 대한 비율을 의미
+		min-content: grid item이 포함하는 내용의 최소 크기를 지정
+		max-content: grid item이 포함하는 내용의 최대 크기를 지정
+	*/
+	
+	.container1{
+		width: 900px;
+		height: 200px;
+		border: 3px solid green;
+		display: grid;
+		
+		/* 3열에 100px을 할당하고 4열에 전체 너비의 25%를 할당 */
+		/* 3, 4열을 할당하고 남은 공간을 1열에 1/3을 할당하고, 2열에 2/3을 할당 */
+		grid-template-columns: 1fr 2fr 100px 25%;
+	}
+	
+	.container1 .item1 {
+		border: 3px solid red;
+	}
+	
+	/* =========================== */
+	
+	.container2{
+		width: 900px;
+		height: 200px;
+		border: 3px solid green;
+		display: grid;
+		
+		/* min-content는 문장을 나타내야 할 경우 가장 긴 단어의 너비에 맞춘다. */
+		/* grid-template-columns: 1fr min-content; */
+		/* grid-template-columns: max-content 1fr; */
+		grid-template-columns: min-content 1fr;
+	}
+	
+	.container2 .item2 {
+		border: 3px solid red;
+	}
+	
+	/* =========================== */
+	
+	.container3{
+		width: 900px;
+		height: 200px;
+		border: 3px solid green;
+		display: grid;
+		
+		/* min-content는 영어는 단어단위가 설정되지만 한글은 단어단위가 아닌 음절단위로 크기를 잡는다 */
+		grid-template-columns: min-content 1fr;
+		/* 한글에 정상적으로 min-content가 적용되게 하려면 아래 속성을 추가하면 된다. */
+		word-break: keep-all;
+	}
+	
+	.container3 .item3 {
+		border: 3px solid red;
+	}
+	
+	
+	
+</style>
+
+</head>
+<body>
+
+	<div class="container1">
+		<div class="item1">1</div>
+		<div class="item1">2</div>
+		<div class="item1">3</div>
+		<div class="item1">4</div>
+	</div><br/>
+	
+	<div class="container2">
+		<div class="item2">Hello Hello word</div>
+		<div class="item2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+		<div class="item2">3</div>
+		<div class="item2">4</div>
+	</div><br/>
+	
+	<div class="container3">
+		<div class="item3">아름다운 이땅에 금수강산에 단군할아버지가 터잡으시고 홍익인간 뜻으로 나라세우니</div>
+		<div class="item3">2</div>
+		<div class="item3">3</div>
+		<div class="item3">4</div>
+	</div><br/>
+	
+</body>
+</html>

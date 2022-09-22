@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>grid 컨테이너 속성9</title>
+
+<style type="text/css">
+
+	/* 
+		justify-items: 컨테이너 내부의 grid에서 item들을 수평으로 정렬
+			=> start: 기본값, 컨테이너 내부의 grid 시작점(왼쪽)에 맞춰 정렬
+			=> center: 컨테이너 내부의 grid 수평 가운데로 정렬
+			=> end: 컨테이너 내부의 grid 끝점(오른쪽)에 맞춰 정렬
+			=> stretch: 컨테이너 내부의 grid 너비에 맞게 item을 늘린다.
+						단, item의 width가 auto(생략)이어야 한다.
+			
+		align-items: 컨테이너 내부의 grid에서 item들을 수직으로 정렬
+			=> start: 기본값, 컨테이너 내부의 grid 시작점(위쪽)에 맞춰 정렬
+			=> center: 컨테이너 내부의 grid 수직 가운데로 정렬
+			=> end: 컨테이너 내부의 grid 끝점(아래쪽)에 맞춰 정렬
+			=> stretch: 컨테이너 내부의 grid 너비에 맞게 item을 늘린다.
+						단, item의 height가 auto(생략)이어야 한다.
+
+	*/
+	
+	.container{
+		width: 450px;
+		height: 450px;
+		border: 3px solid green;
+		display: grid;
+		grid-template-rows: repeat(3, 1fr);
+		grid-template-columns: repeat(3, 1fr);
+		
+		justify-items: stretch;
+		align-items: stretch;
+	}
+	
+	.container .item {
+		/* width: 100px; */
+		/* height: 100px; */
+		border: 3px solid red;	
+	}
+	
+	
+</style>
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+		<div class="item">6</div>
+		<div class="item">7</div>
+		<div class="item">8</div>
+		<div class="item">9</div>
+	</div><br/>
+	
+</body>
+</html>

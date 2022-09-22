@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>grid 컨테이너 속성8</title>
+
+<style type="text/css">
+
+	/* 
+		justify-content: 컨테이너 내부에서 item들을 수평으로 정렬
+			=> start: 기본값, 컨테이너 시작점(왼쪽)에 맞춰 정렬
+			=> center: 컨테이너 수평 가운데로 정렬
+			=> end: 컨테이너 끝점(오른쪽)에 맞춰 정렬
+			=> space-around: 컨테이너에 표시되는 item의 좌, 우 여백을 같게 정렬
+			=> space-between: 컨테이너에 표시되는 첫 번째 item은 왼쪽에 붙이고 마지막 item은 오른쪽에 붙인 후 item 사이의 간격을 균등하게 정렬
+			=> space-evenly: 컨테이너에 표시되는 모든 item 사이의 여백을 균등하게 배치
+		align-content: 컨테이너 내부에서 item들을 수직으로 정렬
+			=> start: 기본값, 컨테이너 시작점(위쪽)에 맞춰 정렬
+			=> center: 컨테이너 수직 가운데로 정렬
+			=> end: 컨테이너 끝점(아래쪽)에 맞춰 정렬
+			=> space-around: 컨테이너에 표시되는 item의 상, 하 여백을 같게 정렬
+			=> space-between: 컨테이너에 표시되는 첫 번째 item은 위쪽에 붙이고 마지막 item은 아래쪽에 붙인 후 item 사이의 간격을 균등하게 정렬
+			=> space-evenly: 컨테이너에 표시되는 모든 item 사이의 여백을 균등하게 배치
+	*/
+	
+	.container{
+		width: 450px;
+		height: 450px;
+		border: 3px solid green;
+		display: grid;
+		grid-template-rows: repeat(3, 100px);
+		grid-template-columns: repeat(3, 100px);
+		
+		justify-content: space-evenly;
+		align-content: space-evenly;
+	}
+	
+	.container .item {
+		border: 3px solid red;	
+	}
+	
+	
+</style>
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+		<div class="item">6</div>
+		<div class="item">7</div>
+		<div class="item">8</div>
+		<div class="item">9</div>
+	</div><br/>
+	
+</body>
+</html>

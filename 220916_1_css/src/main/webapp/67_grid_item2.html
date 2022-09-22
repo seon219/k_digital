@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>grid 아이템 속성2</title>
+
+<style type="text/css">
+
+	/* 
+		justify-self: 단일 grid에서 item을 수평으로 정렬
+			=> start: 기본값,grid 시작점(왼쪽)에 맞춰 정렬
+			=> center: grid 수평 가운데로 정렬
+			=> end: grid 끝점(오른쪽)에 맞춰 정렬
+			
+		align-self: 단일 grid에서 item을 수직으로 정렬
+			=> start: 기본값, grid 시작점(위쪽)에 맞춰 정렬
+			=> center: grid 수직 가운데로 정렬
+			=> end: grid 끝점(아래쪽)에 맞춰 정렬
+	*/
+	
+	.container{
+		width: 600px;
+		height: 200px;
+		border: 3px solid green;
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-columns: repeat(3, 1fr);
+	}
+	
+	.container .item {
+		width: 150px;
+		height: 150px;
+		border: 3px solid red;	
+	}
+	
+	.container .item:nth-child(1) {
+		justify-self: start; 
+		align-self: start;
+	}
+	.container .item:nth-child(2) {
+		justify-self: center; 
+		align-self: center;
+	}
+	.container .item:nth-child(3) {
+		justify-self: end; 
+		align-self: end;
+	}
+	
+	
+</style>
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+	</div><br/>
+	
+</body>
+</html>

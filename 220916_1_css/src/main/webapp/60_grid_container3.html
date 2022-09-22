@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>grid 컨테이너 속성3</title>
+
+<style type="text/css">
+
+	/* 
+		grid-template-areas: 지정된 grid 영역 이름을 참조해 grid 탬플릿을 생성
+		
+		gap: grid-template-areas 랜더링하는 템플릿의 간격 지정. 단축속성
+			=> gap: row-gap column-gap;
+			=> row-gap: grid 템플릿의 행과 행 사이의 간격을 지정
+			=> column-gap: grid 템플릿의 열과 열 사이의 간격을 지정
+	*/
+	
+	.container{
+		width: 600px;
+		grid-template-rows: repeat(3, 100px);
+		grid-template-columns: repeat(3, 1fr);
+		border: 3px solid green;
+		display: grid;
+		
+		/* 각 item 요소마다 grid 속성으로 영역 이름을 지정하고 grid-template-areas로 랜더링 */
+		/* item 영역을 비워두려면 "."을 찍어주면 된다. */
+		grid-template-areas: 
+			"header header header"
+			"main . aside"
+			". footer footer";
+			
+		
+		/* row-gap: 30px;
+		column-gap: 15px; */
+		gap: 30px 15px;
+	}
+	
+	.container .item {
+		border: 3px solid red;	
+	}
+	.container .item:nth-child(1) {
+		grid-area: header;
+	}
+	.container .item:nth-child(2) {
+		grid-area: main;	
+	}
+	.container .item:nth-child(3) {
+		grid-area: aside;	
+	}
+	.container .item:nth-child(4) {
+		grid-area: footer;
+	}
+	
+	
+</style>
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="item">Header</div>
+		<div class="item">Main</div>
+		<div class="item">Aside</div>
+		<div class="item">Footer</div>
+	</div>
+	
+</body>
+</html>

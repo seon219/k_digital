@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>grid 컨테이너 속성7</title>
+
+<style type="text/css">
+
+	/* 
+		grid-template: grid-template-rows, grid-template-columns, grid-template-areas의 단축 속성
+			=> grid-template: grid-template-areas grid-template-rows / grid-template-columns
+	*/
+	
+	.container{
+		border: 3px solid green;
+		display: grid;
+		
+		/* grid-template-rows: 80px 350px 130px;
+		grid-template-columns: 2fr 100px 1fr;
+		grid-template-areas: 
+			"header header header"
+			"main . aside"
+			". footer footer"; */
+		
+		grid-template: 
+			"header header header" 80px
+			"main . aside" 500px
+			"footer footer footer" 130px
+			/ 2fr 100px 1fr;	
+		
+		gap: 30px 15px;
+	}
+	
+	.container .item {
+		border: 3px solid red;	
+	}
+	
+	.container .item:nth-child(1) {
+		grid-area: header;
+	}
+	.container .item:nth-child(2) {
+		grid-area: main;	
+	}
+	.container .item:nth-child(3) {
+		grid-area: aside;	
+	}
+	.container .item:nth-child(4) {
+		grid-area: footer;
+	}
+	
+</style>
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="item">Header</div>
+		<div class="item">Main</div>
+		<div class="item">Aside</div>
+		<div class="item">Footer</div>
+	</div>
+	
+</body>
+</html>
