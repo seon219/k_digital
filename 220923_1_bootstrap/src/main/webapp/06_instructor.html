@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>부트스트랩 웹 페이지</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="./imageS/logo.png"/>
+<link rel="stylesheet" href="./css/bootstrap.css"/>
+
+<style type="text/css">
+
+	.jumbotron {
+		background-image: url(./images/jumbotronBackground.jpg);
+		background-size: cover;
+		color: white;
+		text-shadow: 0.2em 0.2em 0.2em black;
+	}
+
+</style>
+
+
+<script type="text/javascript" src="./js/jquery-3.6.1.js"></script>
+<script type="text/javascript" src="./js/bootstrap.js"></script>
+
+</head>
+<body>
+	<header>
+	 <nav class="container navbar navbar-inverse">
+	 	<div class="container-fluid">
+	 		<div class="navbar-header">
+	 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-toggle" aria-expanded="false">
+		 			<!-- class="sr-only": 큰 화면에는 표시되지 않지만 검색 엔진에서는 이 클래스 내용을 읽는다. -->
+		 			<span class="sr-only"></span>
+		 			<!-- class="icon-bar": 버튼 내부에 표시할 줄의 개수만큼 지정 -->
+		 			<span class="icon-bar"></span>
+		 			<span class="icon-bar"></span>
+		 			<span class="icon-bar"></span>
+		 		</button>
+		 		<a class="navbar-brand" href="./05_bootstrap_webpage5.html">날로 먹는 코딩</a>
+	 		</div>
+	 		
+	 	
+	 		<div class="collapse navbar-collapse" id="nav-toggle">
+	 			<ul class="nav navbar-nav">
+	 				<li class="active">
+	 					<a href="./05_bootstrap_webpage5.html">소개</a>
+	 				</li>
+	 				<li>
+	 					<a href="./instructor.html">강사진</a>
+	 				</li>
+	 				<li class="dropdown">
+	 					<a href="#" class="dorpdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+	 						강의<span class="caret"></span>
+	 					</a>
+	 					<ul class="dropdown-menu">
+	 						<li><a href="./lecture.html?lectureName=C">C언어</a></li>
+	 						<li><a href="./lecture.html?lectureName=Java">Java</a></li>
+	 						<li><a href="./lecture.html?lectureName=Android">Android</a></li>
+	 					</ul>	
+	 				</li>
+	 			</ul>
+	 			
+	 			
+	 			<form class="navbar-form navbar-left">
+	 				<div class="form-group">
+	 					<input type="text" class="form-control" placeholder="검색할 내용을 입력하세요"/>
+	 				</div>
+	 				<button type="button" class="btn btn-default">검색</button>
+	 			</form>
+	 			
+	 			
+	 			
+	 			<div class="nav navbar-nav navbar-right">
+	 				<li class="dropdown">
+	 					<a href="#" class="dorpdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+	 						접속하기<span class="caret"></span>
+	 					</a>
+	 					<ul class="dropdown-menu">
+	 						<li><a href="./loginForm.html">로그인</a></li>
+	 						<li><a href="./registerForm.html">회원가입</a></li>
+	 					</ul>	
+	 				</li>
+	 			</div>
+	 			
+	 		</div>
+	 		
+	 	</div>
+	 </nav>
+	 </header>
+
+
+	<!-- 여기부터 -->
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;&nbsp; 강사진 소개
+						</h3>
+					</div>
+					
+				<div class="panel-body">
+					<div class="media">
+						<div class="media-left">
+							<img class="media-object" src="./images/java.png"/>
+						</div>
+					
+						<div class="media-body">
+							<h4 class="media-heading">홍길동</h4>
+								20xx년부터 강의하고 있습니다.
+						</div>
+					</div> 
+				</div>
+				
+				<table class="table">
+					<thead>
+						<tr>
+							<td>강사명</td>
+							<td>강의번호</td>
+							<td>강의제목</td>
+							<td>강의날짜</td>
+						</tr>
+					</thead>
+					
+					<tbody>
+						<tr>
+							<td>홍길동</td>
+							<td>1</td>
+							<td>
+								<a href="./lecture.html?lectureName=C">C언어 기초 프로그래밍</a>
+							</td>
+							<td>2020-11-03</td>
+						</tr>
+						
+						<tr>
+							<td>홍길동</td>
+							<td>2</td>
+							<td>
+								<a href="./lecture.html?lectureName=java">java언어 기초 프로그래밍</a>
+							</td>
+							<td>2021-02-15</td>
+						</tr>
+						
+						<tr>
+							<td>홍길동</td>
+							<td>3</td>
+							<td>
+								<a href="./lecture.html?lectureName=android">android 기초 프로그래밍</a>
+							</td>
+							<td>2021-08-16</td>
+						</tr>
+					</tbody>
+					
+				</table>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;&nbsp; 강사진 이력
+						</h3>
+					</div>
+					
+					<div class="panel-body">
+						<div class="media">
+							<div class="media-body">
+								정보기술개발 직업훈련교사 2급<br/>
+								정보기술운영관리 직업훈련교사 2급<br/>
+								디자인 직업훈련교사 2급<br/>
+								문화컨텐츠 직업훈련교사 2급(안드로이드)<br/>
+								총무일반사무 직업훈련교사 2급(컴활)<br/>
+								영상제작 직업훈련교사 3급<br/>
+								전자기기개발 직업훈련교사 3급<br/>
+								전자부품개발 직업훈련교사 3급<br/>
+								로봇개발 직업훈련교사 3급<br/>
+								인공지능 직업훈련교사 3급<br/>
+								<!-- 책자? -->
+								평생 교육사 2급<br/>
+								정보처리 기사<br/>
+								정보처리 산업기사<br/>
+								전자계산기조직응용 기사<br/>
+								전자계산기 기사<br/>
+								컴퓨터활용능력 1, 2급<br/>
+								워드 프로세서 1급<br/>
+								사무자동화산업 기사(파워포인트, 엑셀)<br/>
+								정보기기운용 기능사<br/>
+								컴퓨터그래픽스운용 기능사<br/>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+	<!-- 여기까지 instructor.html에 코딩해 넣는 내용 -->
+
+
+	<footer>
+		<div class="container" style="background-color: black; color:white;">
+			<div class="row">
+				<div class="col-sm-2" style="text-align: center;">
+					<h5>Copyright &copy;</h5>
+					<h5>홍길동</h5>
+				</div>
+				<div class="col-sm-4">
+					<h5>대표자 소개</h5>
+					<h5>날로먹는코딩 대표 홍길동입니다. 부트스트랩을 사용해 웹디자인을 하고 있습니다.</h5>
+				</div>
+				<div class="col-sm-2" style="text-align: center;">
+					<h5>내비게이션</h5>
+					<div class="list-group">
+						<a href="./05_bootstrap_webpage5.html" class="list-group-item">소개</a>
+						<a href="./instructor.html" class="list-group-item">강사진</a>
+						<a href="./lecture.html?lectureName=c" class="list-group-item">강의</a>
+					</div>
+				</div>
+				<div class="col-sm-2" style="text-align: center;">
+					<h5>SNS</h5>
+					<div class="list-group">
+						<a href="#" class="list-group-item">페이스북</a>
+						<a href="#" class="list-group-item">인스타그램</a>
+						<a href="#" class="list-group-item">유튜브</a>
+					</div>
+				</div>
+				<div class="col-sm-2" style="text-align: center;">
+					<h5>
+						<span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp; by 홍길동
+					</h5>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>
