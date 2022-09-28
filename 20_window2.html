@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 윈도우2</title>
+	
+<script type="text/javascript" src="./js/javascript20.js"></script>
+
+
+</head>
+
+<!--  
+	onload 이벤트는 브라우저에 내용이 다 표시되면 자동으로 실행되는 이벤트
+-->
+
+<body onload='requestID()'>
+
+	<h1>20_window2.html</h1>
+	ID: <input id="childID" type="text" readonly="readonly"/><br/>
+	<input type="button" value="부모 창으로 전달" onclick="sendID1()"/><br/>
+	<input type="button" value="창을 닫을 때 부모 창으로 전달" onclick="sendID2()"/><br/>
+	<!-- self는 현재 윈도우 의미 -->
+	<input type="button" value="창 닫기" onclick="self.close()"/><br/>
+
+</body>
+
+
+</html>
