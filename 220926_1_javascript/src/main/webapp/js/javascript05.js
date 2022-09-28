@@ -46,7 +46,7 @@ console.log('=====================================');
 function heroprint (hero) {
 	// 인수 hero로 받은 객체 내부의 값을 외부로 꺼내온다
 	// 비구조화 할당을 통해서 객체 내부의 값을 꺼내서 저장할 변수의 이름은 객체에서 사용한 key 이름과 반드시 같아야 한다.
-	// const (key, ...) = 객체;
+	// const {key, ...} = 객체;
 	const {name, actor, alias} = hero;
 	const str = `${alias}(${name}) 역할을 맡은 배우는 ${actor} 입니다.`;
 	console.log(str);
