@@ -1,0 +1,24 @@
+#register {
+	border: 2px solid blue;
+	background: skyblue;
+	padding: 10px;
+	position: absolute;
+	/* id 속성이 register로 지정된 요소를 화면에 표시하지 않는다. */
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
