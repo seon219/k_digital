@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 eval 함수</title>
+	
+<script type="text/javascript" src="./js/javascript26.js"></script>
+
+
+</head>
+
+<body>
+
+	<h1>eval 함수</h1>
+	
+	<p>
+		<h2>문자열로 된 코드를 읽어서 자바스크립트로 실행하기</h2>
+		<input type="text" name="evalValue" placeholder="예) 5 + 10"/>
+		<input type="button" value="계산하기" onclick="evalTest()"/><br/>
+		<span></span>
+	</p>
+	
+	<p>
+		<input class="cal" type="number" value="0"/>
+		<!-- <select class="cal">
+			<option>+</option>
+			<option>-</option>
+			<option>*</option>
+			<option>/</option>
+		</select> -->
+		<input class="cal" type="text" list="calList" size="3"/>
+		<input class="cal" type="number" value="0"/>
+		<input type="button" value="계산하기" onclick="calTest()"/><br/>
+		<span></span>
+	</p>
+	
+	<!-- detalist 태그 -->
+	<datalist id="calList">
+		<option>+</option>
+		<option>-</option>
+		<option>*</option>
+		<option>/</option>
+	</datalist>
+	
+</body>
+
+
+</html>

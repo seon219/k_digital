@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 DOM선택 함수</title>
+	
+<script type="text/javascript" src="./js/javascript22.js"></script>
+
+
+</head>
+
+
+<body>
+
+	<p id="test" class="test" onclick="searchID()">
+		1. getElementById(): 인수로 지정된 id 속성의 첫번째 요소 1개 선택<br/>
+		&nbsp;&nbsp;&nbsp; 같은 화면에 id 요소가 여러개 있다면 첫번째 요소 1개만 선택
+	</p>
+	
+	<p id="test" class="test" onclick="searchName()">
+		2. getElementsByName(): 인수로 지정된 name 속성의 모든 요소를 선택<br/>
+		&nbsp;&nbsp;&nbsp; 같은 화면에 같은 name 속성을 가지는 요소가 여러개의 있다면 모두 선택 => NodeList<br/>
+		&nbsp;&nbsp;&nbsp; <input type="text" name="test" size="30"/><br/>
+		&nbsp;&nbsp;&nbsp; <input type="text" name="test" size="30"/><br/>
+		&nbsp;&nbsp;&nbsp; <input type="text" name="test" size="30"/><br/>
+	</p>
+	
+	<p id="test" class="test" onclick="searchTagName()">
+		3. getElementsByTagName(): 인수로 지정된 모든 태그를 선택<br/>
+		&nbsp;&nbsp;&nbsp; 같은 화면에 같은 이름의 tag가 있다면 모두 선택 => NodeList
+	</p>
+	
+	<p id="test" class="test" onclick="searchClass()">
+		4. getElemenstByClassName(): 인수로 지정된 class의 속성값을 가지는 모든 요소를 선택<br/>
+		&nbsp;&nbsp;&nbsp; 같은 화면에 같은 class 속성을 가지는 요소가 있다면 모두 선택 => NodeList
+	</p>
+	
+	<p onclick="searchCSSSelector()">
+		DOM(Document Object Model) 탐색 함수
+	</p>
+	
+</body>
+
+
+</html>
