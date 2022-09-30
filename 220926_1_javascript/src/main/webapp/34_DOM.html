@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 DOM 탐색</title>
+	
+<script type="text/javascript" src="./js/javascript34.js"></script>
+
+</head>
+<body>
+
+	<div>
+		나는 div
+		<p>
+			<span>child1</span>
+		</p>
+		
+		나도 div
+		<p>
+			<span>child2</span>
+		</p>
+		<p>
+			<span>child3</span>
+		</p>
+	</div>
+	<input type="button" value="부모탐색" onclick="searchParent()"/>
+	<input type="button" value="자식탐색" onclick="searchChild()"/>
+	
+	
+	<h3>test1을 포함하고 있는 div 태그를 찾아 배경색 변경 - parentNode</h3>
+	<h3>마지막 div 태그에 포함된 test4의 폰트를 크기 20px로 변경 - childNode</h3>
+	<div onclick="testSearch()" style="border: 1px solid tomato; width: 40px;">적용</div>
+	<div>
+		<p>test1</p>
+		<p>test2</p>
+	</div>
+	<div>
+		<p>test3</p>
+		<p>test4</p>
+	</div>
+</body>
+
+
+</html>
