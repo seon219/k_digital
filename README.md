@@ -5,4 +5,5 @@
 √ jsp ...⏳<br>
   - html <br>
   - css <br>
-  - javascript ...⏳ 
+  - javascript <br>
+  - jQuery...⏳ 
