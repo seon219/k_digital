@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery form2</title>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="./js/jquery05.js"></script>
+<style type="text/css">
+	body{
+		font-family: D2coding;
+	}
+</style>
+
+</head>
+<body>
+
+	<h2>회원가입</h2>
+	<table>
+		<tr>
+			<th>아이디</th>
+			<td>
+				<input type="text">
+				<input type="button" value="중복체크">
+			</td>
+		</tr>
+		<tr>
+			<th>비밀번호</th>
+			<td>
+				<input type="password">
+			</td>
+		</tr>
+		<tr>
+			<th>이름</th>
+			<td>
+				<input type="text">
+			</td>
+		</tr>
+		<tr>
+			<th>이메일</th>
+			<td>
+				<input type="text">@<input type="text" name="addr"/>
+				<select name="email">
+					<option>=====직접입력=====</option>
+					<option>naver.com</option>
+					<option>gmail.com</option>
+					<option>daum.net</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<th>취미</th>
+			<td>
+				<input type="checkbox" name="hobbies" value="등산">등산
+				<input type="checkbox" name="hobbies" value="바둑">바둑
+				<input type="checkbox" name="hobbies" value="낚시">낚시
+			</td>
+		</tr>
+	</table>
+	
+</body>
+</html>
