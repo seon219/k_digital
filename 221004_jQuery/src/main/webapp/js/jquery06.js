@@ -85,24 +85,30 @@ $(() => {
 		} else {
 			 $('input:checkbox[name=chk]:checked').each(index => {
 				let chk =  $('input:checkbox[name=chk]:checked').eq(index);
-				console.log(chk.val()); // 
+				console.log(chk.val()); // 과일가격
+				console.log(chk.next()); //<b>
+				//console.log(chk.next().html()); //과일 이름 
+				console.log(chk.next().text()); //과일 이름 
+				
+				//$('#result').html('과일이름: ' + chk.next().html() + '과일 가격: ' + chk.val()); // html은 안에 쓰여있는 내용을 지우고 다시 입력됨
+				// append(): html() 메소드나 text()메소드는 기존의 내용을 지우고 인수로 지정한 내용을 넣어주지만,
+				// append() 메소드는 기존에 내용에 인수로 지정한 내용을 추가
+				$('#result').append('과일이름: ' + chk.next().html() + ', 과일 가격: ' + chk.val() + '<br/>'); //html은 안에 쓰여있는 내용을 지우고 다시 입력됨
+				
 			})
 		}
-		
-		
 	})
+	
+	// 형제(sibling) 요소 탐색
+	//   .siblings() : 선택된 요소의 형제 요소 중에서 지정한 선택자에 해당되는 모든 요소를 선택한다.
+	//   .next() : 선택된 요소 바로 다음에 위치한 형제 요소 1개를 선택한다.
+	//   .nextAll() : 선택된 요소 바로 다음에 위치한 형제 요소를 모두 선택한다.
+	//   .nextUntil() : 선택된 요소 바로 다음에 위치한 형제 요소 중에서 지정한 선택자에 해당되는 요소, 
+	//   바로 이전까지의 요소를 모두 선택한다.
+	//   .prev() : 선택된 요소 바로 이전에 위치한 형제 요소 1개를 선택한다.
+	//   .prevAll() : 선택된 요소 바로 이전에 위치한 형제 요소를 모두 선택한다.
+	//   .prevUntil() : 선택된 요소 바로 이전에 위치한 형제 요소 중에서 지정한 선택자에 해당되는 요소,
+	//   바로 다음까지의 요소를 모두 선택한다.      
+	
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
 
