@@ -20,7 +20,5 @@ $(() => {
 			//console.log('마우스 빠져나감')
 			$('.menu > div').stop().slideUp()
 		}
-		
 	)
-	
 })
