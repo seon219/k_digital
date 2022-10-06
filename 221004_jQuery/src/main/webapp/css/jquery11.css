@@ -1,0 +1,21 @@
+p {
+	width: 150px;
+	border: 1px solid skyblue;
+	cursor: pointer; /* 마우스 커서 모양 => 손가락 */
+	position: absolute;
+	left: 10px;
+	display: none;
+}
+
+img {
+	width: 200px;
+	position: absolute;
+	left: 200px;
+	top: 100px;
+}
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+body{
+		font-family: D2coding;
+	}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+div{
+	color: black;
+}
+
+.menu {
+	background: dodgerblue;
+	width: 150px;
+	border: 1px solid skyblue;
+	transition: 0.5;
+}
+
+.menu:hover {
+	background: skyblue;
+	width: 200px;
+}
+
+/* div:hover, a:hover {
+	background: pink;
+	color: white;
+	text-decoration: none;
+} */
