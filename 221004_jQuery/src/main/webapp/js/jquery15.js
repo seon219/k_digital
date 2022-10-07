@@ -19,7 +19,7 @@ $(() => {
 	})
 	
 	
-	$('btn').click(() => {
+	$('#btn').click(() => {
 		$('img').toggleClass('onoffImage')
 	})
 })
