@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery ajax</title>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="./js/jquery22.js" defer="defer"></script>
+<link rel="stylesheet" href="./css/jquery22.css">
+
+</head>
+<body>
+	
+	<h2>Ajax를 이용해서 비동기 방식으로 xml파일 읽어오기</h2>
+	<!-- 비동기: 먼저 실행한 프로그램의 실행시간을 기다리지 않고 실행 -->
+	
+	<fieldset>
+		<legend>사원 정보조회</legend>
+		<input type="text" name="empid"/>
+		<input id="emp_search" type="button" value="조회"/>
+	</fieldset>
+	
+	<table>
+		<tr>
+			<th>사원번호</th>
+			<td><input type="text" name="idx"/>
+		</tr>
+		<tr>
+			<th>이름</th>
+			<td><input type="text" name="name"/>
+		</tr>
+		<tr>
+			<th>이메일</th>
+			<td><input type="text" name="email" size="40"/>
+		</tr>
+		<tr>
+			<th>내선번호</th>
+			<td><input type="text" name="phone"/>
+		</tr>
+		<tr>
+			<th>입사일</th>
+			<td><input type="text" name="hire"/>
+		</tr>
+	</table>
+	
+</body>
+</html>
