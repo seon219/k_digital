@@ -6,4 +6,5 @@
   - html <br>
   - css <br>
   - javascript <br>
-  - jQuery...⏳ 
+  - jQuery <br>
+  - jsp...⏳ 
