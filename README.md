@@ -7,6 +7,7 @@
   - css <br>
   - javascript <br>
   - jQuery <br>
-  - jsp...⏳ 
+  - jsp...⏳ <br>
+
 √ mysql <br>
 √ oracle <br>
