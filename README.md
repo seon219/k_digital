@@ -8,3 +8,5 @@
   - javascript <br>
   - jQuery <br>
   - jsp...⏳ 
+√ mysql <br>
+√ oracle <br>
