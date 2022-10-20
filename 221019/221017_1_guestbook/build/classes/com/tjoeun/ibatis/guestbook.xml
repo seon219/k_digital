@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- DOCTYPE이 sqlMap인 xml 파일은 처리할 SQL 명령을 기억하는 xml 파일이다. -->
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="com.tjoeun.vo.GuestbookVO">
+	<!-- id: SQL 명령을 식별한다. -->
+	<!-- parameterClass: SQL 명령으로 DAO 클래스에서 전달되는 데이터의 타입을 적는다. -->
+	<!-- resultClass: SQL 명령문이 실행되고 DAO 클래스로 리턴되는 데이터의 타입을 적는다. -->
+
+	
+	<!-- 글 1건을 저장 -->
+	<insert id="insert" parameterClass="vo">
+		insert into guestbook (idx, name, password, memo, ip) 
+		values (guestbook_idx_seq.nextval, #name#, #password#, #memo#, #ip#)
+	</insert>
+	
+	
+	<!-- 전체 글의 개수 -->
+	<select id="selectCount" resultClass="int"> <!-- resultClass: 리턴되는 데이터 타입 -->
+		SELECT count(*) FROM guestbook
+	</select>
+	
+	
+	<!-- 1페이지 분량의 글 목록을 얻어온다. -->
+	<select id="selectList" parameterClass="java.util.HashMap" resultClass="vo">
+		<!-- mysql -->
+		<!-- select * from guestbook order by idx desc limit #startNO#, #pageSize# -->
+		
+		<!-- <![CDATA[ ~ ]]> 사이에 입력한 내용은 무조건 문자열로 취급 -->
+		<![CDATA[
+			select * from (
+				select rownum rnum, TT.* from (
+					select * from guestbook order by idx desc
+				)TT where rownum <= #endNO#
+			) where rnum >= #startNO#
+		]]>
+	</select>
+	
+	
+	<!-- 글 1건을 얻어온다. -->
+	<select id="selectByIdx" parameterClass="int" resultClass="vo">
+		SELECT * FROM guestbook where idx = #idx#
+	</select>
+	
+	
+	<!-- 글 1건을 삭제한다. -->
+	<delete id="delete" parameterClass="int">
+		delete from guestbook where idx = #idx#
+	</delete>
+
+
+	<!-- 글 1건을 수정한다. -->
+	<update id="update" parameterClass="vo">
+		update guestbook set name = #name#, memo = #memo# where idx = #idx#
+	</update>
+	
+	
+	<!-- memo필드에 검색어가 포함된 글의 개수를 얻어온다. -->
+	<select id="selectCountMemo" parameterClass="String" resultClass="int">
+		select count(*) from guestbook where memo like '%'||#item#||'%'
+	
+	<!-- 	 
+			데이터베이스별 ibatis 부분일치(like) 쿼리 조건 작성방법
+			oracle : like '%'||#검색어#||'%'
+			mssql : like '%'+#검색어#+'%'
+			mysql : like concat('%', #검색어#, '%')
+	-->	
+		
+	</select> 
+	
+	
+	<!-- 메모 필드에 검색어가 포함된 1페이지 분량의 글 목록을 얻어온다. -->
+	<select id="selectListMemo" parameterClass="param" resultClass="vo">
+		<![CDATA[
+			select * from (
+				select rownum rnum, TT.* from (
+					select * from guestbook where memo like '%'||#item#||'%' order by idx desc
+				)TT where rownum <= #endNo#
+			) where rnum >= #startNo#
+		]]>
+	</select>
+	
+	
+	<!-- name 필드에 검색어가 포함된 글의 개수를 얻어온다. -->
+	<select id="selectCountName" parameterClass="String" resultClass="int">
+		SELECT count(*) FROM guestbook where name like %'||#item#||'%';
+	</select>
+	
+</sqlMap>
