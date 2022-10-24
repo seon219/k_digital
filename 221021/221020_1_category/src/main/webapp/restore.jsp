@@ -31,7 +31,7 @@
 		// 2. 복구 버튼이 클릭되면 해당 카테고리 자체를 "복구된 카테고리 입니다."로 수정한다.
 		//service.restoreCheck(vo.getIdx());
 		
-		// 3. 복구 버튼이 클릭되면 deleteCheck 필드의 값을 "YES"로 수정
+		// 3. 복구 버튼이 클릭되면 deleteCheck 필드의 값을 "NO"로 수정
 		service.restoreCheck(vo.getIdx());
 		
 		// 복구 메시지를 출력하고 카테고리 목록을 얻어오는 페이지(list.jsp)를 호출한다.
