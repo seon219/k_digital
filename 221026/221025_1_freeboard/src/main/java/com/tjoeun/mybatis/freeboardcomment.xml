@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tjoeun.vo.FreeboardCommentVO">
+
+	<!-- id: sql 명령을 식별한다. -->
+	<!-- parameterType: sql 명령으로 전달되는 데이터의 타입을 적는다. -->
+	<!-- resultType: sql 명령 실행결과 리턴되는 데이터의 타입을 적는다. -->
+	
+	
+	<!-- 댓글 1건을 저장한다 -->
+	<insert id="insertComment" parameterType="co">
+		insert into freeboardcomment (idx, gup, name, password, content, ip) 
+		values (freeboardcomment_idx_seq.nextval, #{gup}, #{name}, #{password}, #{content}, #{ip})
+	</insert>
+	
+	
+	<!-- 댓글의 개수를 얻어온다 -->
+	<select id="commentCount" parameterType="int" resultType="int">
+		select count(*) from freeboardcomment where gup = #{idx}
+	</select>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
