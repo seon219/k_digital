@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tjoeun.vo.FreeboardCommentVO">
+
+	<!-- id: sql 명령을 식별한다. -->
+	<!-- parameterType: sql 명령으로 전달되는 데이터의 타입을 적는다. -->
+	<!-- resultType: sql 명령 실행결과 리턴되는 데이터의 타입을 적는다. -->
+	
+	
+	<!-- 댓글 1건을 저장한다 -->
+	<insert id="insertComment" parameterType="co">
+		insert into freeboardcomment (idx, gup, name, password, content, ip) 
+		values (freeboardcomment_idx_seq.nextval, #{gup}, #{name}, #{password}, #{content}, #{ip})
+	</insert>
+	
+	
+	<!-- 댓글의 개수를 얻어온다 -->
+	<select id="commentCount" parameterType="int" resultType="int">
+		select count(*) from freeboardcomment where gup = #{idx}
+	</select>
+	
+	
+	<!-- 댓글 목록을 얻어온다 -->
+	<select id="selectCommentList" parameterType="int" resultType="co">
+		select * from freeboardcomment where gup = #{idx} order by idx desc
+	</select>
+	
+	
+	<!-- 댓글 1건을 얻어온다. -->
+	<select id="selectCommentByIdx" parameterType="int" resultType="co">
+		select * from freeboardcomment where idx = #{idx}
+	</select>
+	
+	
+	<!-- 댓글 1건을 수정한다. -->
+	<update id="updateComment" parameterType="co">
+		update freeboardcomment set content = #{content} where idx = #{idx}
+	</update>
+	
+	
+	<!-- 댓글 1건을 삭제 -->
+	<delete id="deleteComment" parameterType="co">
+		delete from freeboardcomment where idx = #{idx}
+	</delete>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
