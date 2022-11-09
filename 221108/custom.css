@@ -1,0 +1,29 @@
+.CodeMirror {
+	font-family: D2Coding; 
+        font-size: 12pt; 
+        line-height: 140%; 
+        font-weight: bold;
+}
+.container { 
+	width: 100% !important;
+}
+div.output pre {
+	font-family: D2Coding;
+	font-size: 12pt;
+	line-height: 140%; 
+	font-weight: bold;
+	color: blue;
+}
+div > p {
+	font-family: D2Coding;
+	font-size: 12pt;
+	line-height: 140%; 
+	font-weight: bold;
+	color: hotpink;
+}
+.cm-s-ipython span.cm-comment {
+	font-style: normal;
+	font-size: 12pt;
+	font-weight: bold;
+	color: tomato;	
+}
