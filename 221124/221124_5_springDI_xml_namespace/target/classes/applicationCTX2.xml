@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="student5" class="com.tjoeun.springDI_xml_namespace.Student">
+		<constructor-arg value="장길산"/>
+		<constructor-arg value="50"/>
+		<constructor-arg>
+			<list>
+				<value>당구</value>
+				<value>골프</value>
+				<value>볼링</value>
+			</list>
+		</constructor-arg>
+		<property name="weight" value="185"/>
+		<property name="height" value="120"/>
+	</bean>
+
+	<bean id="family" class="com.tjoeun.springDI_xml_namespace.Family">
+		<constructor-arg value="홍아빠"/>
+		<constructor-arg value="홍엄마"/>
+		<property name="sisterName" value="홍언니"/>
+		<property name="brotherName" value="홍오빠"/>
+	</bean>
+
+</beans>
+
+
+
+
+
+
+
+
+
+
+
