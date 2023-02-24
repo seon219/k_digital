@@ -14,3 +14,5 @@
 
 √ mysql <br>
 √ oracle <br>
+
+√ python <br>
